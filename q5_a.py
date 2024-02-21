@@ -40,14 +40,12 @@ def partition(arr, low, high, stats):
             # swap
             arr[i], arr[j] = arr[j], arr[i] 
             # increase swap
-            if i != j:
-                stats['swaps'] += 1
+            stats['swaps'] += 1
     
     # swap pivot into correct position
     arr[i + 1], arr[high] = arr[high], arr[i + 1] 
     # increase swaps
-    if i + 1 != high:
-        stats['swaps'] += 1
+    stats['swaps'] += 1
     # the index of pivot
     return i + 1
 
